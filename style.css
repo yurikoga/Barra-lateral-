@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Fundo com imagem */
+.main_box {
+    height: 100vh;
+    width: 100%;
+    background: url('imagem/teclado.png') no-repeat center;
+    background-size: cover;
+}
+
+/* Sidebar */
+.sidebar_menu {
+    position: fixed;
+    height: 100vh;
+    width: 280px;
+
+    /* efeito vidro */
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* Logo */
+.logo {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.logo a {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+/* Menu */
+.menu {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.menu li {
+    padding: 15px 20px;
+    transition: 0.3s;
+}
+
+.menu li:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu i {
+    margin-right: 10px;
+}
+
+/* Redes sociais */
+.social-media {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.social-media a {
+    color: #fff;
+    margin-right: 10px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.social-media a:hover {
+    color: #00ffff;
+}
+/* MENU COMEÇA FECHADO */
+.sidebar_menu {
+    left: 0;
+}
+
+/* QUANDO ABRE */
+.sidebar_menu.active {
+    left: 0;
+}
+
+/* TOPO (logo + ícones) */
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+/* ÍCONES */
+.logo i {
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* X começa escondido */
+#cancel {
+    display: none;
+}
+
+/* quando abre */
+.sidebar_menu.active #cancel {
+    display: block;
+}
+
+.sidebar_menu.active #btn {
+    display: none;
+}
